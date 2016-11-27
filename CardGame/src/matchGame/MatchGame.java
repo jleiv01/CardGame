@@ -19,7 +19,7 @@ import java.util.Random;
 
 import javax.swing.*;
 public class MatchGame extends JPanel{
-	//timer
+	//timer set to Private
 	private Timer timer;
 	
 	//panels
