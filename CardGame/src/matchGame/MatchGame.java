@@ -2,7 +2,7 @@
 
         *Project #  : Group Project
 
-        *Students:    Jackson Martinez
+        *Students:    Jackson Martinez, Jose Leiva, Gale Sanchez, Mark Cavazos, David Ponow
 
         *Completion Date: 
 
@@ -19,7 +19,7 @@ import java.util.Random;
 
 import javax.swing.*;
 public class MatchGame extends JPanel{
-	//timer set to Private
+	//timer
 	private Timer timer;
 	
 	//panels
