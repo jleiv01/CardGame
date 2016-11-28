@@ -2,7 +2,7 @@
 
         *Project #  : Group Project
 
-        *Students:    Jackson Martinez, Jose Leiva, Gale Sanchez, Mark Cavazos, David Ponow
+        *Students:    Jackson Martinez, Jose Leiva, Gale Sanchez, Mark Cavazos, David Ponoder
 
         *Completion Date: 
 
@@ -25,7 +25,7 @@ public class Welcome extends JPanel{
 
 	
 	public Welcome(){
-		ImageIcon directionsIcon = new ImageIcon("DirectionScreenshot.png");
+		ImageIcon directionsIcon = new ImageIcon("img/DirectionScreenshot.png");
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 		//panels
 		welcome = new JPanel();
@@ -79,7 +79,7 @@ public class Welcome extends JPanel{
 			if(event.getSource()==close){
 				MatchGame game = new MatchGame();
 				Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-				game.setPreferredSize (new Dimension(dim.width, dim.height));
+				game.setPreferredSize (new Dimension(dim.width-200, dim.height-200));
 				JFrame frame = new JFrame ("Match Game");
 				frame.getContentPane().add(game);
 				frame.pack();

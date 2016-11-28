@@ -2,7 +2,7 @@
 
         *Project #  : Group Project
 
-        *Students:    Jackson Martinez, Jose Leiva, Gale Sanchez, Mark Cavazos, David Ponow
+        *Students:    Jackson Martinez, Jose Leiva, Gale Sanchez, Mark Cavazos, David Ponder
 
         *Completion Date: 
 
@@ -45,7 +45,7 @@ public class MatchGame extends JPanel{
 	String [] difficulty = {"Please select difficulty","easy(5X5)","medium(6X6)","hard(7X7)"};
 	JButton [] buttons = new JButton[49];
 	int [] buttonCheck = new int[49];
-	String[] imageLocation = {"1.png","2.png","3.png","4.png","5.png","6.png"};
+	String[] imageLocation = {"img/1.png","img/2.png","img/3.png","img/4.png","img/5.png","img/6.png"};
 	int[] scoreSet = new int[11];
 
 	//constructor
@@ -56,7 +56,7 @@ public class MatchGame extends JPanel{
 		main = new JPanel();
 		main.setLayout(new BorderLayout());
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-		main.setPreferredSize (new Dimension(dim.width-100, dim.height-100));
+		main.setPreferredSize (new Dimension(dim.width-300, dim.height-300));
 
 		grid = new JPanel();
 		north = new JPanel();

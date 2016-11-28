@@ -2,7 +2,7 @@
 
         *Project #  : Group Project
 
-        *Students:    Jackson Martinez, Jose Leiva, Gale Sanchez, Mark Cavazos, David Ponow
+        *Students:    Jackson Martinez, Jose Leiva, Gale Sanchez, Mark Cavazos, David Ponder
 
         *Completion Date: 
 

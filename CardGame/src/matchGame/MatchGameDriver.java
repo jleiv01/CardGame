@@ -2,7 +2,7 @@
 
         *Project #  : Group Project
 
-        *Students:   Jackson Martinez, Jose Leiva, Gale Sanchez, Mark Cavazos, David Ponow
+        *Students:   Jackson Martinez, Jose Leiva, Gale Sanchez, Mark Cavazos, David Ponder
 
         *Completion Date: 
 
@@ -27,10 +27,12 @@ public class MatchGameDriver {
 				  Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 			      frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
 
-			      frame.setPreferredSize (new Dimension(dim.width,dim.height));
+			      frame.setPreferredSize (new Dimension(dim.width-200,dim.height-200));
+			   
 			      Welcome welcome = new Welcome();
 
-			      welcome.setPreferredSize(new Dimension(dim.width, dim.height));
+			      welcome.setPreferredSize(new Dimension(dim.width-200, dim.height-200));
+			    
 			      frame.getContentPane().add(welcome);
 			      
 			      frame.pack();
