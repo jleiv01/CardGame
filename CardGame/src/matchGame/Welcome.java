@@ -1,15 +1,14 @@
-      /**Class: Programming Fundamentals III
+/**Class: Programming Fundamentals III
 
-        *Project #  : Group Project
+ *Project #  : From Group Project
 
-        *Students:    Jackson Martinez, Jose Leiva, Gale Sanchez, Mark Cavazos, David Ponoder
+ *Author:    Jose Leiva
+ *Completion Date: 
 
-        *Completion Date: 
-
-        *Project Description: This program is a matching game, the user will be presented with a target icon and an array of buttons. The user will have to match the target icon with buttons with the same icons from the button array within
-        *a specified time. The user will earn points 100 points for every correctly matched icon and lose 100 points for every miss-matched icons. If the button clicked is a match with the target, the button will highlight green. If the button clicked
-        *is NOT a match with the target, the button will highlight red. After the game expires, the user may end the game or start a new game.
-       **/
+ *Project Description: This program is a matching game, the user will be presented with a target icon and an array of buttons. The user will have to match the target icon with buttons with the same icons from the button array within
+ *a specified time. The user will earn points 100 points for every correctly matched icon and lose 100 points for every miss-matched icons. If the button clicked is a match with the target, the button will highlight green. If the button clicked
+ *is NOT a match with the target, the button will highlight red. After the game expires, the user may end the game or start a new game.
+ **/
 
 
 package matchGame;
@@ -23,7 +22,7 @@ public class Welcome extends JPanel{
 	private JLabel directions1, directions2, directions3, directions4, directions5, directions6, directions7, directionScreenshot;
 	private JButton close;
 
-	
+
 	public Welcome(){
 		ImageIcon directionsIcon = new ImageIcon("img/DirectionScreenshot.png");
 		//Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
@@ -32,7 +31,7 @@ public class Welcome extends JPanel{
 		eastPanel = new JPanel();
 		centerPanel = new JPanel();
 		northPanel = new JPanel();
-		
+
 		//panel formatting
 		welcome.setLayout(new BorderLayout());
 		northPanel.setPreferredSize(new Dimension(100, 200));
@@ -57,7 +56,7 @@ public class Welcome extends JPanel{
 		directionScreenshot = new JLabel(directionsIcon);
 		close = new JButton("Start Game!");
 		close.addActionListener(new ButtonListener());
-		
+
 		//add panels and components
 		add(welcome);
 		eastPanel.add(directions1);
@@ -83,10 +82,10 @@ public class Welcome extends JPanel{
 				JFrame frame = new JFrame ("Match Game");
 				frame.getContentPane().add(game);
 				frame.pack();
-			    frame.setVisible(true);
-			    Window w = SwingUtilities.getWindowAncestor(Welcome.this);
+				frame.setVisible(true);
+				Window w = SwingUtilities.getWindowAncestor(Welcome.this);
 				w.setVisible(false);
-				
+
 			}
 		}
 	}
