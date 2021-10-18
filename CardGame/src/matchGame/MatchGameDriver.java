@@ -1,9 +1,8 @@
       /**Class: Programming Fundamentals III
 
-        *Project #  : Group Project
+        *Project #  : From Group Project
 
-        *Students:   Jackson Martinez, Jose Leiva, Gale Sanchez, Mark Cavazos, David Ponder
-
+        *Author:    Jose Leiva
         *Completion Date: 
 
         *Project Description: This program is a matching game, the user will be presented with a target icon and an array of buttons. The user will have to match the target icon with buttons with the same icons from the button array within

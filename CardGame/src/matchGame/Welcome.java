@@ -26,7 +26,7 @@ public class Welcome extends JPanel{
 	
 	public Welcome(){
 		ImageIcon directionsIcon = new ImageIcon("img/DirectionScreenshot.png");
-		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+		//Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 		//panels
 		welcome = new JPanel();
 		eastPanel = new JPanel();
