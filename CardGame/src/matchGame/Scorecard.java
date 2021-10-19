@@ -1,15 +1,14 @@
-      /**Class: Programming Fundamentals III
+/**Class: Programming Fundamentals III
 
-        *Project #  : Group Project
+ *Project #  : From Group Project
 
-        *Students:    Jackson Martinez, Jose Leiva, Gale Sanchez, Mark Cavazos, David Ponder
+ *Author:    Jose Leiva
+ *Completion Date: 
 
-        *Completion Date: 
-
-        *Project Description: This program is a matching game, the user will be presented with a target icon and an array of buttons. The user will have to match the target icon with buttons with the same icons from the button array within
-        *a specified time. The user will earn points 100 points for every correctly matched icon and lose 100 points for every miss-matched icons. If the button clicked is a match with the target, the button will highlight green. If the button clicked
-        *is NOT a match with the target, the button will highlight red. After the game expires, the user may end the game or start a new game.
-       **/
+ *Project Description: This program is a matching game, the user will be presented with a target icon and an array of buttons. The user will have to match the target icon with buttons with the same icons from the button array within
+ *a specified time. The user will earn points 100 points for every correctly matched icon and lose 100 points for every miss-matched icons. If the button clicked is a match with the target, the button will highlight green. If the button clicked
+ *is NOT a match with the target, the button will highlight red. After the game expires, the user may end the game or start a new game.
+ **/
 
 package matchGame;
 import java.awt.*;

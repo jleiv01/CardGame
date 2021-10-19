@@ -38,7 +38,7 @@ public class MatchGame extends JPanel{
 	private int selection,numClickedCorrect;
 	private int timerCount=0;
 	private int controlValue,score,numCorrect,numIncorrect;
-	private int gameCount=0;
+	private int roundCount=0;
 
 	//arrays
 	String [] difficulty = {"Please select difficulty","easy(5X5)","medium(6X6)","hard(7X7)"};
@@ -136,7 +136,7 @@ public class MatchGame extends JPanel{
 					difficultySelect.setEnabled(false);
 					selection = 3;
 					timerCount=5;
-					gameCount++;
+					roundCount++;
 
 					ImageIcon targetIcon = new ImageIcon(imageLocation[controlValue]);
 					target.setIcon(targetIcon);
@@ -169,7 +169,7 @@ public class MatchGame extends JPanel{
 					difficultySelect.setEnabled(false);
 					selection = 1;
 					timerCount=5;
-					gameCount++;
+					roundCount++;
 					ImageIcon targetIcon = new ImageIcon(imageLocation[controlValue]);
 					target.setIcon(targetIcon);
 					target.setHorizontalAlignment(SwingConstants.CENTER);
@@ -201,7 +201,7 @@ public class MatchGame extends JPanel{
 					difficultySelect.setEnabled(false);
 					selection = 2;
 					timerCount=5;
-					gameCount++;
+					roundCount++;
 					ImageIcon targetIcon = new ImageIcon(imageLocation[controlValue]);
 					target.setIcon(targetIcon);
 					target.setHorizontalAlignment(SwingConstants.CENTER);
@@ -228,7 +228,14 @@ public class MatchGame extends JPanel{
 	}
 	private class ButtonListener implements ActionListener{
 		public void actionPerformed(ActionEvent event){
+			
+			//disables the new game button after 10 games have been played
+			//Bug found on this if statement
+			if (roundCount ==10){
+				newGame.setEnabled(false);
+			}
 			//Conditional statements to determine the action based on user selection
+			
 			if(event.getSource()==newGame){
 				grid.removeAll();
 				grid.revalidate();
@@ -240,11 +247,11 @@ public class MatchGame extends JPanel{
 				controlValue=0;
 				ImageIcon resetIcon = new ImageIcon(imageLocation[5]);
 				target.setIcon(resetIcon);
-				//disables the new game button after 10 games have been played
-				if (gameCount >10){
-					newGame.setEnabled(false);
-				}
+				
 			}
+			
+			
+			
 			//Button logic to verify if button clicked matches the target variable for button index 0-48
 			int buttonPressed;
 			for(buttonPressed=0; buttonPressed < buttons.length; buttonPressed++){
@@ -259,7 +266,6 @@ public class MatchGame extends JPanel{
 						scoreLabel.setText(Integer.toString(score));
 						buttonPressed++;
 					}else buttons[buttonPressed].setBackground(Color.red);
-					buttons[buttonPressed].setOpaque(true);
 					score -= 100;
 					scoreLabel.setText(Integer.toString(score));
 				}
@@ -282,7 +288,7 @@ public class MatchGame extends JPanel{
 				grid.removeAll();
 				grid.revalidate();
 				grid.repaint();
-				scoreSet[gameCount] = score;
+				scoreSet[roundCount] = score;
 				timerCount=-2;
 				if(timerCount==-2){
 					gameOverDialog = new JLabel("Game Over! Please click \"New Game\" or \"End Game\".");
@@ -304,10 +310,10 @@ public class MatchGame extends JPanel{
 					highScore = scoreSet[i];
 					bestGame = i;
 				}
-				scoreOut = scoreOut +("\tGame: " + i + "\t\tScore: " + scoreSet[i]+ "\n");
+				scoreOut = scoreOut +("\tRound: " + i + "\t\tScore: " + scoreSet[i]+ "\n");
 			}
 			scoreOut = scoreOut +("\t--------------------------------------------------\n");
-			scoreOut = scoreOut +("\tBest Game: " + bestGame + "\t\tHighscore:" + highScore);
+			scoreOut = scoreOut +("\tBest Round: " + bestGame + "\t\tHighscore:" + highScore);
 			Scorecard endScore = new Scorecard(scoreOut);	
 			Window w = SwingUtilities.getWindowAncestor(MatchGame.this);
 			w.setVisible(false);
